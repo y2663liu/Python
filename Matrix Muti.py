@@ -1,38 +1,38 @@
-print('ÊäÈëmuti()¿ªÊ¼¼ÆËãà»\n')
+print('è¾“å…¥muti()å¼€å§‹è®¡ç®—å—·\n')
 
 def muti():
-    print('»¶Ó­´óÀĞÊ¹ÓÃ±¾ÃÈĞÂµÄ¾ØÕó³Ë·¨¼ÆËãÆ÷£¬ÓĞÎÊÌâ»¹Çë¶à¶à°üº¬à»')
+    print('æ¬¢è¿å¤§ä½¬ä½¿ç”¨æœ¬èŒæ–°çš„çŸ©é˜µä¹˜æ³•è®¡ç®—å™¨ï¼Œæœ‰é—®é¢˜è¿˜è¯·å¤šå¤šåŒ…å«å—·')
     print('')
     print('****************************************************************************')
-    print('ÌáÊ¾£º')
-    print('±¾¼ÆËãÆ÷Ö§³ÖÕûÊıÓëĞ¡Êı£¬µ«ÇëÎñ±ØÔÚÏàÁÚµÄÁ½¸öÊı×ÖÖ®¼ä´òÉÏ¿Õ¸ñ£¨Ïë´ò¼¸¸ö´ò¼¸¸öà»£¡£©')
+    print('æç¤ºï¼š')
+    print('æœ¬è®¡ç®—å™¨æ”¯æŒæ•´æ•°ä¸å°æ•°ï¼Œä½†è¯·åŠ¡å¿…åœ¨ç›¸é‚»çš„ä¸¤ä¸ªæ•°å­—ä¹‹é—´æ‰“ä¸Šç©ºæ ¼ï¼ˆæƒ³æ‰“å‡ ä¸ªæ‰“å‡ ä¸ªå—·ï¼ï¼‰')
     print('****************************************************************************') 
     print('')
-    print('·¢²»¶àËô£¬¿ªÊ¼°É£¡\n')
-    left(None, None, None, 'µÚÒ»¸ö')
+    print('å‘ä¸å¤šå”†ï¼Œå¼€å§‹å§ï¼\n')
+    left(None, None, None, 'ç¬¬ä¸€ä¸ª')
     
 def left(second_matrix, second_hang, second_lie, being_used):
     
-    n = input('ÇëÏÈ¸æËßÎÒ{0}¾ØÕóÓĞ¼¸ĞĞ°È£º'.format(being_used)).strip()
+    n = input('è¯·å…ˆå‘Šè¯‰æˆ‘{0}çŸ©é˜µæœ‰å‡ è¡Œå­ï¼š'.format(being_used)).strip()
     while not n.isdigit():
-        print('Çë´óÀĞÊäÈëÒ»¸öÕıÕûÊı£¬ÖØĞÂÊÔÊÔ°È')
-        n = input('ÇëÏÈ¸æËßÎÒ{0}¾ØÕóÓĞ¼¸ĞĞ°È£º'.format(being_used)).strip()
+        print('è¯·å¤§ä½¬è¾“å…¥ä¸€ä¸ªæ­£æ•´æ•°ï¼Œé‡æ–°è¯•è¯•å­')
+        n = input('è¯·å…ˆå‘Šè¯‰æˆ‘{0}çŸ©é˜µæœ‰å‡ è¡Œå­ï¼š'.format(being_used)).strip()
     n = int(n)
     i = 1
     first_matrix = []
     while i <= n:
-        read_in = input('¸øÒ¯ÊäÈë{0}¾ØÕóµÄµÚ{1}ĞĞ: '.format(being_used, i))
+        read_in = input('ç»™çˆ·è¾“å…¥{0}çŸ©é˜µçš„ç¬¬{1}è¡Œ: '.format(being_used, i))
         start_with_num = read_in.strip()
         num_list = start_with_num.split(' ')
         while '' in num_list:
             num_list.remove('')
         num_list = check_valid(num_list)
-        if being_used == 'ĞÂ':
+        if being_used == 'æ–°':
             check_len = second_hang
         elif i == 1:
             check_len = len(num_list)
         while check_len != len(num_list):
-            read_in = input('¸ÃĞĞ³¤¶ÈÓĞÎó£¬ÄãËûß÷ÊÇ²»ÊÇÉµ£¬³¤¶ÈÓ¦¸ÃÎª{0}£¬ÆøËÀÅ¼àÏ£¬ÖØĞÂÊä£¡£º'.format(check_len))
+            read_in = input('è¯¥è¡Œé•¿åº¦æœ‰è¯¯ï¼Œä½ ä»–å–µæ˜¯ä¸æ˜¯å‚»ï¼Œé•¿åº¦åº”è¯¥ä¸º{0}ï¼Œæ°”æ­»å¶å˜ï¼Œé‡æ–°è¾“ï¼ï¼š'.format(check_len))
             start_with_num = read_in.strip()
             num_list = start_with_num.split(' ')  
             while '' in num_list:
@@ -45,11 +45,11 @@ def left(second_matrix, second_hang, second_lie, being_used):
     first_hang = n
     first_lie = check_len
     
-    if being_used == 'µÚÒ»¸ö':
-        print('Ó´Î÷£¬µÚÒ»¸ö¾ØÕóÒÑ¾­ÊäÈëÍê³ÉÈÇ£¬½ÓÏÂÀ´ÇëÊäÈëµÚ¶ş¸ö¾ØÕó°È£¡')
-        right(first_matrix, first_hang, first_lie, 'µÚ¶ş¸ö')
+    if being_used == 'ç¬¬ä¸€ä¸ª':
+        print('å“Ÿè¥¿ï¼Œç¬¬ä¸€ä¸ªçŸ©é˜µå·²ç»è¾“å…¥å®Œæˆæƒ¹ï¼Œæ¥ä¸‹æ¥è¯·è¾“å…¥ç¬¬äºŒä¸ªçŸ©é˜µå­ï¼')
+        right(first_matrix, first_hang, first_lie, 'ç¬¬äºŒä¸ª')
     
-    if being_used == 'ĞÂ':
+    if being_used == 'æ–°':
         find_result(first_hang,first_lie,second_hang,second_lie, first_matrix, second_matrix)
         
 def right(first_matrix, first_hang, first_lie, being_used):
@@ -58,7 +58,7 @@ def right(first_matrix, first_hang, first_lie, being_used):
     j = 1
     second_matrix = []    
     while j <= m:
-        read_in = input('¸øÒ¯ÊäÈë{0}¾ØÕóµÄµÚ{1}ĞĞ£º'.format(being_used, j))
+        read_in = input('ç»™çˆ·è¾“å…¥{0}çŸ©é˜µçš„ç¬¬{1}è¡Œï¼š'.format(being_used, j))
         start_with_num = read_in.strip()
         num_list = start_with_num.split(' ')
         while '' in num_list:
@@ -67,7 +67,7 @@ def right(first_matrix, first_hang, first_lie, being_used):
         if j == 1:
             check_len = len(num_list)
         while check_len != len(num_list):
-            read_in = input('¸ÃĞĞ³¤¶ÈÓĞÎó£¬ÄãËûß÷ÊÇ²»ÊÇÉµ£¬³¤¶ÈÓ¦¸ÃÎª{0}£¬ÆøËÀÅ¼àÏ£¬ÖØĞÂÊä£¡£º'.format(check_len))
+            read_in = input('è¯¥è¡Œé•¿åº¦æœ‰è¯¯ï¼Œä½ ä»–å–µæ˜¯ä¸æ˜¯å‚»ï¼Œé•¿åº¦åº”è¯¥ä¸º{0}ï¼Œæ°”æ­»å¶å˜ï¼Œé‡æ–°è¾“ï¼ï¼š'.format(check_len))
             start_with_num = read_in.strip()
             num_list = start_with_num.split(' ')  
             while '' in num_list:
@@ -103,7 +103,7 @@ def find_result(first_hang, first_lie, second_hang, second_lie, first_matrix, se
         result.append(result_line)
         hang1 += 1
     
-    print('Õğ¾ª£¡99%µÄÈË¶¼²»ÖªµÀ×îºóµÄ½á¹û¾ÓÈ»ÊÇËü£¡')
+    print('éœ‡æƒŠï¼99%çš„äººéƒ½ä¸çŸ¥é“æœ€åçš„ç»“æœå±…ç„¶æ˜¯å®ƒï¼')
     position_of_row = 0
     while position_of_row < first_hang:
         position_of_element = 0
@@ -113,13 +113,13 @@ def find_result(first_hang, first_lie, second_hang, second_lie, first_matrix, se
         print(result[position_of_row][position_of_element])
         position_of_row += 1
     
-    keep_going = input('´óÀĞ»¹ÔÚ½á¹ûÉÏ¼ÌĞøÔËËãÂï£¿£¨ÌáÊ¾£ºÊäÈë×ó³Ë»òÕßÓÒ³Ë¼ÌĞøà»,ÊäÈëÈÎºÎÆäËûµÄ¶«¶«¾Í½áÊøÁËà»£© ')
-    if keep_going.strip() == 'ÓÒ³Ë':
-        right(result, first_hang, second_lie, 'ĞÂ')
-    elif keep_going.strip() == '×ó³Ë':
-        left(result, first_hang, second_lie, 'ĞÂ')    
+    keep_going = input('å¤§ä½¬è¿˜åœ¨ç»“æœä¸Šç»§ç»­è¿ç®—å˜›ï¼Ÿï¼ˆæç¤ºï¼šè¾“å…¥å·¦ä¹˜æˆ–è€…å³ä¹˜ç»§ç»­å—·,è¾“å…¥ä»»ä½•å…¶ä»–çš„ä¸œä¸œå°±ç»“æŸäº†å—·ï¼‰ ')
+    if keep_going.strip() == 'å³ä¹˜':
+        right(result, first_hang, second_lie, 'æ–°')
+    elif keep_going.strip() == 'å·¦ä¹˜':
+        left(result, first_hang, second_lie, 'æ–°')    
     else:
-        print('ÈöÓÍÀ­À­£¬»Ó»Ó')
+        print('æ’’æ²¹æ‹‰æ‹‰ï¼ŒæŒ¥æŒ¥')
 
 def check_valid(list):
     found = 0
@@ -130,7 +130,7 @@ def check_valid(list):
         except ValueError:
             answer = True
         if answer and found == 0:
-            read_in = input('¸ÃĞĞºÃÏñ»ìÈëÁËÊ²Ã´Ææ¹ÖµÄ¶«Î÷£¬ÖØĞÂÊäÒ»ÏÂ°È£º')
+            read_in = input('è¯¥è¡Œå¥½åƒæ··å…¥äº†ä»€ä¹ˆå¥‡æ€ªçš„ä¸œè¥¿ï¼Œé‡æ–°è¾“ä¸€ä¸‹å­ï¼š')
             found += 1
             start_with_num = read_in.strip()
             num_list = start_with_num.split(' ')  
